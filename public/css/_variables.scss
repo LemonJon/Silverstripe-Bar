@@ -1,0 +1,11 @@
+//colors
+$BackgroundColor: #030303;
+$PrimaryColor: #212121;
+$White: rgb(230, 230, 230);
+//layout
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

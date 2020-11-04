@@ -1,0 +1,103 @@
+@import "./header";
+@import "./variables";
+@import "./footer";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+
+// Body
+body {
+    background-color: $BackgroundColor;
+    font-family: "Roboto";
+    color: $White;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+
+// Content
+// Content
+.container {
+    margin-top: 3%;
+    .mainText {
+        @include flexCenter();
+        text-align: center;
+        p {
+            max-width: 40em;
+        }
+    }
+    .cardCustom {
+        overflow: hidden;
+        margin-top: 3%;
+        background-color: rgba(245, 245, 245, 0);
+        display: flex;
+        flex-shrink: 2;
+        h5 {
+            color: $White;
+            text-align: center;
+        }
+        p {
+            margin: 0px;
+            text-align: center;
+        }
+
+        .imgWrap {
+            overflow: hidden;
+
+            .inner {
+                display: flex;
+                transition: all 0.5s ease;
+                height: auto;
+                position: relative;
+                img {
+                    max-width: auto;
+                    max-height: 100%;
+                }
+                &:hover {
+                    img {
+                        transition: all 0.5s ease;
+                        max-width: 100%;
+                        height: auto;
+                        position: relative;
+                        transform: scale(1.25);
+                    }
+                    .imgText {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-end;
+                        padding-left: 0.5em;
+                        padding-bottom: 0.5em;
+                        background-color: rgba(0, 0, 0, 0.3);
+                        p {
+                            text-align: left;
+                            font-size: 80%;
+                        }
+                    }
+                }
+            }
+            .imgText {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: none;
+            }
+        }
+    }
+    .pagination {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        a {
+            margin-left: 5px;
+            color: $White;
+        }
+    }
+}

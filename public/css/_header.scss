@@ -1,0 +1,10 @@
+@import "./variables";
+
+// Header
+header {
+  background-color: $PrimaryColor;
+  .logo {
+    padding: 5px;
+    @include flexCenter();
+  }
+}
